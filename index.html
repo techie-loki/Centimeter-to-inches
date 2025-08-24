@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contain" id="container">
+        <h1 class="heading">Centimeter to Inches</h1>
+        <div class="in" >
+            <input type="text" id="input" placeholder="Enter a centimeter">
+        </div>
+        <div class="btn" id="button">
+            <button onclick="convert()" >Convert to Inches</button>
+        </div>
+        <div class="result" id="result">
+
+        </div>
+    </div>
+
+    <script>
+        function convert(){
+        const cmVal = Number(document.getElementById("input").value);
+        const inchVal = cmVal/2.54;
+        const result = document.getElementById("result");
+        result.innerHTML = inchVal.toFixed(3) + "Inches";
+        }
+    </script>
+</body>
+</html>
